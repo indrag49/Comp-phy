@@ -6,7 +6,7 @@ def bifurcation(x_, r_):
         x=[x_]
         r=[r_]
         dr=0.00001
-        for i in xrange(1, 160001):
+        for i in range(1, 160001):
                 x+=[r[i - 1]*x[i - 1]*(1 - x[i - 1]), ]
                 r+=[r[i - 1] + dr, ]
         pylab.title("Bifurcation diagram of logistics map")

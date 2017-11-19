@@ -29,4 +29,6 @@ for (i in 2:10000) {
   }
 }
 
-plot(x, y, type="l", col="red")
+plot(x, y, type="l", col="red", main="Random walk in 2D")
+  
+  

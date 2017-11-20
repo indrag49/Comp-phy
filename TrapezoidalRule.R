@@ -1,3 +1,6 @@
+## Integration by trapezoidal rule
+## We integrate f(x)=x^3 + 5x in the range [a, b]
+
 f <- function(x) {
   return (x^3 + 5*x)
 }

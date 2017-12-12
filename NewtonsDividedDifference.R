@@ -1,6 +1,6 @@
 ## Author: Indranil Ghosh, Jadavpur University, Physics Department
 
-## Lagrange's Interpolation
+## Newton’s Divided Difference Interpolation
 
 NewtonDifference <- function(X, x, y) {
   N <- length(y)

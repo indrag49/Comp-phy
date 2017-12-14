@@ -8,6 +8,7 @@ Spline3_coef <- function(n, t, y) {
   b <- numeric()
   u <- numeric()
   v <- numeric()
+  z <- numeric()
   for (i in 2:n) {
     h <- c(h, t[i] - t[i - 1])
     b <- c(b, (y[i] - y[i - 1])/h[i-1])
@@ -18,9 +19,9 @@ Spline3_coef <- function(n, t, y) {
     u[i] <- 2*(h[i] + h[i-1])-h[i-1]^2/u[i-1]
     v[i] <- 6*(b[i]-b[i-1])-h[i-1]*v[i-1]/u[i-1]
   }
-  z[n] <- 0
+  z <- c(z, 0)
   for (i in n-1:2) z[i] <- (v[i]-h[i]*z[i+1])/u[i]
-  z[0] <- 0
+  z <- c(z, 0)
   i <- n
   while(i>=1){
     if (x-t[i]>=0) break

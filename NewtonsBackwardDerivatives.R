@@ -18,9 +18,7 @@ NFD <- function(X, x, y) {
   s <- (X - x[N])/h
   f_double_dashed <- f_dashed[2:length(f_dashed)]
   f1 <- c(1, (2*s+1)/2, (3*s^2+6*s+2)/6, (4*s^3+18*s^2+22*s+6)/24, (5*s^4+40*s^3+105*s^2+100*s+24)/120)
-  #if(length(f_dashed) < length(f1)) f_dashed <- c(f_dashed, numeric(length(f1)-length(f_dashed)))
   f2 <- c(1, (s+1), (6*s^2+18*s+11)/12, (2*s^3+12*s^2+21*s+10)/12)
-  #if(length(f_double_dashed) < length(f2)) f__double_dashed <- c(f_double_dashed, numeric(length(f2)-length(f_double_dashed)))
   D <- data.frame(h, s, sum(f1[1:length(f_dashed)]*f_dashed)/h, sum(f2[1:length(f_double_dashed)]*f_double_dashed)/(h^2))
   colnames(D) <- c('h', 's', "f'(X)","f''(X)")
   return(D)

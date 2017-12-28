@@ -1,6 +1,6 @@
 #Author: Indranil Ghosh, Jadavpur University, Physics Department
 
-#Gauss Jacobi algorithm for solving a set of linear equations or finding the inverse of a matrix
+#Gauss Jordan algorithm for solving a set of linear equations or finding the inverse of a matrix
 
 import numpy as np     
 A = np.array(([1., 10., -1.], [2., 3., 20.], [10., -1., 2.]))

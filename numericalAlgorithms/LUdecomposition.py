@@ -3,7 +3,6 @@
 ## LU decomposition 
 
 import numpy as np
-import pandas as pd
 def LU(A):
         row=len(A)
         col=len(A[0])

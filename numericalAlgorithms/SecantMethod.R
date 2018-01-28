@@ -3,7 +3,6 @@
 ## Secant method
 
 f <- function(x) x*exp(x)-cos(x)
-f_dashed <- function(x) x*exp(x)+exp(x)+sin(x)
 Secant <- function(x0, x1, Max, epsilon) {
   k <- 1
   while(k<=Max) {

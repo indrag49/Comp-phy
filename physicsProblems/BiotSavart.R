@@ -45,7 +45,7 @@ cel <- function(kc, p, l, s){
   return(pi/2*(S+cc*em)/(em*(em+P)))
 }
 
-# We can calculate the magnetic field at any point (X, Y. Z) on/off the axis
+# We can calculate the magnetic field at any point (X, Y, Z) on/off the axis
 B <- function(X, Y, Z, a, length, I, n) {
   # length is the length of the cylinder
   # a is the radius of the solenoid

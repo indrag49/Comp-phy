@@ -49,14 +49,14 @@ def Bairstow(Pol, r, s, epsilon, Max_steps):
             for i in range(N-2, -1, -1):c[i]=b[i]+r*c[i+1]+s*c[i+2]
 ##            print("c=",c)
             
-##            A=np.array(([c[2], c[3]], [c[1], c[2]]))
-##            x=np.array(([-b[1]], [-b[0]]))
-##            rs=GJ(A, x) # Using the Gauss-Jordan algorithm
+            A=np.array(([c[2], c[3]], [c[1], c[2]]))
+            x=np.array(([-b[1]], [-b[0]]))
+            rs=GJ(A, x) # Using the Gauss-Jordan algorithm
 ##            print("rs=",rs)
             
-##            del_r, del_s=rs.item(0), rs.item(1)
-            del_s=(c[1]*b[1]-c[2]*b[0])/(c[2]**2-c[1]*c[3])
-            del_r=-(b[1]+c[3]*del_s)/c[2]
+            del_r, del_s=rs.item(0), rs.item(1)
+##            del_s=(c[1]*b[1]-c[2]*b[0])/(c[2]**2-c[1]*c[3])
+##           del_r=-(b[1]+c[3]*del_s)/c[2]
             r+=del_r
             s+=del_s
 ##            print("r=",r)

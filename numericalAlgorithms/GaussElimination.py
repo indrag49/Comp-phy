@@ -29,8 +29,8 @@ def GE(A, b):
               Aug[i,]=Aug[k,]
               Aug[k,]=t
               for j in range(i+1,row):
-                      s=Aug[i,i]/Aug[j, i]
-                      Aug[j,]-=Aug[i,]/s
+                      s=Aug[j,i]/Aug[i, i]
+                      Aug[j,]-=Aug[i,]*s
       print(Aug)
       x=np.zeros(row)
       for i in range(row-1, -1, -1): x[i]=(Aug[i,row]-sum([Aug[i, j]*x[j] for j in range(i+1, row)]))/Aug[i, i]

@@ -35,8 +35,8 @@ def GJ(A, b):
               Aug[i,]=Aug[k,]
               Aug[k,]=t
               for j in range(i+1,row):
-                      s=Aug[i,i]/Aug[j, i]
-                      Aug[j,]-=Aug[i,]/s
+                      s=Aug[j,i]/Aug[i, i]
+                      Aug[j,]-=Aug[i,]*s
       print(Aug)
       for i in range(row): Aug[i,]/=Aug[i, i]
       d=1

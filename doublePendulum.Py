@@ -6,10 +6,10 @@ import numpy as np
 
 g=9.8
 pi=3.14159265359
-m1=5.
+m1=2.
 m2=1.
 l1=3.
-l2=3.
+l2=6.
 
 def f1(t, z1, z2, z3, z4): return z3
 def f2(t, z1, z2, z3, z4): return z4
@@ -18,13 +18,13 @@ def f4(t, z1, z2, z3, z4): return (m2*l2*z4**2*sin(z1-z2)*cos(z1-z2)+g*sin(z1)*c
 
 ##z1_initial=3*pi/4.
 ##z2_initial=pi/2.
-z1_initial=pi/3.
-z2_initial=pi/3.
+z1_initial=pi/2.
+z2_initial=2*pi
 z3_initial=0.2
 z4_initial=0.022
 t_initial=0
-t_final=10
-h=0.0001
+t_final=11
+h=0.001
 
 def Runge(z1_initial, z2_initial, z3_initial, z4_initial, t_initial, h, t_final):
         time=list(np.arange(t_initial, t_final+h, h))
@@ -98,14 +98,8 @@ BLACK=(0, 0, 0)
 GREEN=(0, 255, 0)
 BLUE=(0, 0, 255)
 
-X1=[l1*sin(theta1[0]), ]
-Y1=[-l1*cos(theta1[0]), ]
-X2=[l1*sin(theta1[0])+l2*sin(theta2[0]), ]
-Y2=[-l1*cos(theta1[0])-l2*cos(theta2[0]), ]
-
 DISPLAYSURF.fill(WHITE)
-        
-##i=1
+
 i=0
 while True:
         for event in pygame.event.get():
@@ -114,15 +108,17 @@ while True:
                         pygame.quit()
                         sys.exit()
         
+        if i==len(theta1):
+                pygame.image.save(DISPLAYSURF, 'DoublePendulum.png')
+                pygame.quit()
+                sys.exit()
+        
         DISPLAYSURF.fill(WHITE)
 
         X1+=[l1*sin(theta1[i]), ]
         Y1+=[-l1*cos(theta1[i]), ]
         X2+=[l1*sin(theta1[i])+l2*sin(theta2[i]), ]
         Y2+=[-l1*cos(theta1[i])-l2*cos(theta2[i]), ]
-
-##        pygame.draw.line(DISPLAYSURF, WHITE,  (int(400 + X1[i - 1]*40), 400 - int(Y1[i - 1]*40)), (int(400 + X1[i]*40), 400 - int(Y1[i]*40)), 1) 
-##        pygame.draw.line(DISPLAYSURF, RED, (int(400 + X2[i - 1]*40), 400 - int(Y2[i - 1]*40)), (int(400 + X2[i]*40), 400 - int(Y2[i]*40)), 1)
 
         pygame.draw.circle(DISPLAYSURF, WHITE, (int(400 + 0), 200 - int(0)), 2, 0)
         pygame.draw.circle(DISPLAYSURF, BLUE, (int(400 + X1[i]*40), 200 - int(Y1[i]*40)), 7, 0)

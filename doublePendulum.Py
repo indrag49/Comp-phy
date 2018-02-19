@@ -2,6 +2,7 @@
 
 from math import sqrt, sin, cos
 import pylab
+import pygame
 import numpy as np
 
 g=9.8

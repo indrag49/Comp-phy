@@ -133,12 +133,12 @@ i=0
 while True:
         for event in pygame.event.get():
                 if event.type==QUIT:
-                        pygame.image.save(DISPLAYSURF, 'DoublePendulum.png')
+                        pygame.image.save(DISPLAYSURF, 'TripleFlailPendulum.png')
                         pygame.quit()
                         sys.exit()
         
         if i==len(theta1):
-                pygame.image.save(DISPLAYSURF, 'DoublePendulum.png')
+                pygame.image.save(DISPLAYSURF, 'TripleFlailPendulum.png')
                 pygame.quit()
                 sys.exit()
         

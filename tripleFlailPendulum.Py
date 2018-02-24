@@ -2,8 +2,9 @@
 
 from math import sqrt, sin, cos
 import pylab
-import pygame
 import numpy as np
+import random, pygame, sys
+from pygame.locals import *
 
 g=9.8
 pi=3.14159265359

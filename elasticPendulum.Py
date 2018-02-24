@@ -3,6 +3,8 @@
 from math import sqrt, sin, cos
 import pylab
 import numpy as np
+import random, pygame, sys
+from pygame.locals import *
 
 g=9.81
 pi=math.acos(-1.0)

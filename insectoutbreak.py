@@ -34,7 +34,4 @@ def Runge(N_initial, t_initial, h, t_final):
         pylab.show()
 
 Runge(N_initial, t_initial, h, t_final)
-        return(P)
                                                        
-print(KMP(S1, S2))               
-

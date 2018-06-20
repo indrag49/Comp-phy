@@ -60,9 +60,9 @@ def Runge(x_initial, y_initial, z_initial, t_initial, h, t_final):
                 k24=h*f2(p+h, q+k13, r+k23, s+k33)
                 k34=h*f3(p+h, q+k13, r+k23, s+k33)
 
-                X+=[X[i-1]+(k11+2*k12+2*k13+k14), ]
-                Y+=[Y[i-1]+(k21+2*k22+2*k23+k24), ]
-                Z+=[Z[i-1]+(k31+2*k32+2*k33+k34), ]
+                X+=[X[i-1]+(k11+2*k12+2*k13+k14)/6, ]
+                Y+=[Y[i-1]+(k21+2*k22+2*k23+k24)/6, ]
+                Z+=[Z[i-1]+(k31+2*k32+2*k33+k34)/6, ]
 
         X_dashed=[]
         Y_dashed=[]

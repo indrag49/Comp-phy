@@ -27,7 +27,7 @@ def Runge(N_initial, t_initial, h, t_final):
                 k2=h*f(p+h/2., q+k1/2.)
                 k3=h*f(p+h/2., q+k2/2.)
                 k4=h*f(p+h, q+k3)
-                n+=[q+(k1+2*k2+2*k3+k4), ]
+                n+=[q+(k1+2*k2+2*k3+k4)/6., ]
         n_dashed=[R*i*(1-i/K)-B*i**2/(A**2+i**2) for i in n]
         pylab.plot(time, n)
 ##        pylab.plot(n, n_dashed)

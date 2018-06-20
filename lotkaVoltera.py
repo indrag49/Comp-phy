@@ -7,13 +7,13 @@ import math as m
 def f1(t, x, y): return a*x-b*x*y
 def f2(t, x, y): return d*x*y-c*y
 
-a=1.5
-b=1.
-c=3.
+a=2/3.
+b=4/3.
+c=1.
 d=1.
 
-x_initial=10.
-y_initial=4.
+x_initial=1.8
+y_initial=1.8
 
 t_initial=0
 t_final=20
@@ -45,14 +45,17 @@ def Runge(x_initial, y_initial, t_initial, h, t_final):
                 X+=[X[i-1]+(k11+2*k12+2*k13+k14)/6., ]
                 Y+=[Y[i-1]+(k21+2*k22+2*k23+k24)/6., ]
 
-        pylab.plot(time, X, 'r-')
-        pylab.plot(time, Y, 'g-')
-        pylab.ylabel('X, Y')
-        pylab.xlabel('T')
-        pylab.show()
+##        pylab.plot(time, X, 'r-')
+##        pylab.plot(time, Y, 'g-')
+##        pylab.ylabel('X, Y')
+##        pylab.xlabel('T')
+##        pylab.show()
 
-        pylab.plot(X, Y, '--')
-        pylab.show()
+        pylab.plot(X, Y, '-')
+##        pylab.show()
+        
+
+for i in np.arange(0.9, 1.9, 0.1): Runge(i, i,t_initial, h, t_final)
+pylab.show()
 
 
-Runge(x_initial, y_initial,t_initial, h, t_final)

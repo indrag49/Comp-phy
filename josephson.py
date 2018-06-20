@@ -52,8 +52,8 @@ def Runge(x1_initial, x2_initial, t_initial, h, t_final):
                 k14=h*f1(p+h, q+k13, r+k23)
                 k24=h*f2(p+h, q+k13, r+k23)
 
-                x1+=[x1[i-1]+(k11+2*k12+2*k13+k14), ]
-                x2+=[x2[i-1]+(k21+2*k22+2*k23+k24), ]
+                x1+=[x1[i-1]+(k11+2*k12+2*k13+k14)/6., ]
+                x2+=[x2[i-1]+(k21+2*k22+2*k23+k24)/6., ]
 
                 v+=[0 if I_[i]<=1 else hbar*x2[i]/(2*e*Ic*R), ]
                 

@@ -10,13 +10,9 @@ def f1(t, x, y, z): return -y-z
 def f2(t, x, y, z): return x+a*y
 def f3(t, x, y, z): return b+z*(x-c)
 
-#a=0.2
-#b=0.2
-#c=5.7
-
-a=0.1
-b=0.1
-c=18.
+a=0.2
+b=0.2
+c=5.7
 
 x_initial=0
 y_initial=0

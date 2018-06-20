@@ -20,7 +20,7 @@ def Runge(r, x_initial, t_initial, h, t_final):
                 k2=h*f(p+h/2., q+k1/2.)
                 k3=h*f(p+h/2., q+k2/2.)
                 k4=h*f(p+h, q+k3)
-                X+=[q+(k1+2*k2+2*k3+k4), ]
+                X+=[q+(k1+2*k2+2*k3+k4)/6., ]
         return [time, X]
         pylab.show()
 

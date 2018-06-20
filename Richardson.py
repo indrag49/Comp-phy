@@ -48,8 +48,8 @@ def Runge(x_initial, y_initial, t_initial, h, t_final):
                 k14=h*f1(p+h, q+k13, r+k23)
                 k24=h*f2(p+h, q+k13, r+k23)
 
-                X+=[X[i-1]+(k11+2*k12+2*k13+k14), ]
-                Y+=[Y[i-1]+(k21+2*k22+2*k23+k24), ]
+                X+=[X[i-1]+(k11+2*k12+2*k13+k14)/6., ]
+                Y+=[Y[i-1]+(k21+2*k22+2*k23+k24)/6., ]
 
 
         pylab.plot(X, Y, 'r-')
